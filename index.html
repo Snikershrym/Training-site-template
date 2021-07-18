@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Барбершоп "Бородинский"</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo">
-        <img src="img/index-log.svg" width="368" height="153" alt="Логотип барбершопа
+        <img src="images/index-logo.png" width="368" height="153" alt="Логотип барбершопа
         'Бородинский">
       </a>
       <ul class="site-navigation">
@@ -19,7 +23,9 @@
         <li><a href="contacts.html">Контакти</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="login-link">Вход</li>
+        <li class=" ">
+          <a class="login-link" href="login.html">Вход</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -43,8 +49,9 @@
           <p>Наші мастери-профісіонали свого дела і не можуть коштувати дешево.До ддогош хіба ціна не дає опреділений статуси?</p>
        </li>
       </ul>
-     </section>
+    </section>
 
+    <div class="index-columns">
      <section class="news">
       <h2>Новости</h2>
       <ul class="news-list">
@@ -63,12 +70,14 @@
      <section class="galery">
        <h2>Фотогалерея</h2>
        <figure class="gallery-content">
-         <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерйер"></a>
+         <a href="#"><img src="images/galery-pic.jpg" width="286" height="164" alt="Интерйер"></a>
         </figure>
-        <span class="button gallery-button gallery-button-back">Назад</span>
-        <span class="button gallery-button gallery-button-back">Вперед</span>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
       </section>
+    </div>
 
+    <div class="index-colums">
       <section class="contacts">
         <h2>Контактная информация</h2>
         <p>
@@ -88,8 +97,28 @@
       <section class="appointment">
         <h2>Записатись</h2>
         <p class="appointment-info">Укажіть дату і час і ми звяжемся з вами для підтверженя броні</p>
+        <form class="appointment-info" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            <label for="appointment-date"> Дата</label>
+           <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2021">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-time">Час</label>
+            <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+          </p>
+          <p class="appointment-item">
+             <label id="appointment-name">Ваше ім'я</label>
+             <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+          </p>
+          <p class="appointment-item">
+             <label id="appointment-phone">Телефон</label>
+             <input id="appointment-phone" type="text" name="phone" value="" placeholder="7 123 456-78-90">
+          </p>
+          <button class="button" type="submit">Відправити</button>
+        </form>
       </section>
-    </main>
+    </div>
+  </main>
     <footer class="main-footer">
       <p class="footer-contacts">
         Барбершоп 'Бородинский'<br>
@@ -114,12 +143,34 @@
     <section class="modal modal-login">
       <h2>Лічний кабінет</h2>
       <p>Ведіть свій логін і пароль.</p>
-      <span class="modal-close">x</span>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visual-hidden" for="user-login">Логін</label>
+          <input class="login-icon-user" type="text" name="login" placeholder="Логін">
+        </p>
+        <p>
+          <label class="visual-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+        <input type="checkbox" name="remember" class="visually-hidden" id="login-password-info">
+        <label for="login-password-info">Запомніть мене
+          </label>
+        <a class="restore" href="#">Я забув пароль!</a>
+        </p>
+        <button class="button" type="submit">Війти</button>
+      </form>
+      <button class="modal-close" type="button">Закрити
+        </button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hiden">Як до нас добратись?</h2>
-      <span class="modan-close">x</span>
+      <p>
+        <img src="img/map.jpg" width="780" height="560" alt="Офіс компанії по адрису вул Лопушенка 19/8, Київ">
+      </p>
+      <button class="modan-close" type="button">Закрити
+      </button>
     </section>
   </body>
 </html>
